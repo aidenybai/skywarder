@@ -1,0 +1,30 @@
+{
+  "name": "skywarder",
+  "version": "0.0.1",
+  "description": "Powerful REST API for interacting with Skyward via scraping.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "NODE_ENV=production node ."
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-bearer-token": "^2.4.0",
+    "express-boom": "^2.0.0",
+    "express-rate-limit": "^5.0.0",
+    "helmet": "^3.21.2",
+    "mongoose": "^5.8.11",
+    "morgan": "^1.9.1",
+    "uid-generator": "^1.0.0"
+  },
+  "author": "Aiden Bai <aidenybai@gmail.com> (aiden.codes)",
+  "engines": {
+    "node": "10.x"
+  },
+  "license": "MIT"
+}

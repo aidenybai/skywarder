@@ -1,0 +1,5 @@
+.git/
+node_modules/
+shrinkwrap.yaml
+.env
+package-lock.json
