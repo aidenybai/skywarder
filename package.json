@@ -20,6 +20,7 @@
     "helmet": "^3.21.2",
     "mongoose": "^5.8.11",
     "morgan": "^1.9.1",
+    "node-cmd": "^3.0.0",
     "uid-generator": "^1.0.0"
   },
   "author": "Aiden Bai <aidenybai@gmail.com> (aiden.codes)",
