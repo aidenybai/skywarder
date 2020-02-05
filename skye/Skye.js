@@ -45,7 +45,7 @@ class Skye {
   }
   
   // Blank login attempt
-  login(user, pass = 0) {
+  login(user, pass) {
     return authenticate(this.skywardURL)(user, pass);
   }
 }
