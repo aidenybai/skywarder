@@ -132,58 +132,73 @@ const parseBreakdown = ($) => {
     .toArray();
 };
 
+// Parsing function
 const parseGradebook = ($) => {
   const parseSemesterCategory = (parentTr) => {
+    // Extract Category by reading title and removing excess spaces (Thank Skyward for a garbage way of dealing with whitespace)
     const category = $(parentTr)
       .text()
       .trim();
+
+    // Map breakdown to process junk
     const breakdown = [
       $(parentTr).next(),
       $(parentTr)
         .next()
         .next(),
     ].map((tr) => {
+      // Get table element and remove sides
       const label = $(tr)
         .find('td')
         .slice(1, 2);
+
+      // Get lit by getting first item of the span inside
       const lit = label
         .find('span')
         .first()
         .text();
 
+      // Get hover-over tooltip for each span
       const datesText = label
         .find('span')
         .first()
         .attr('tooltip');
+
+      // Regex and process out dates
       const datesResults = /(\d{2}\/\d{2}\/\d{4})\s-\s(\d{2}\/\d{2}\/\d{4})/.exec(datesText);
       const begin = datesResults ? datesResults[1] : '';
       const end = datesResults ? datesResults[2] : '';
       const dates = { begin, end };
 
+      // Process and regex out weight
       const weightText = label
         .find('span')
         .last()
         .text();
       const weight = extractNumber(/\(\D+(\d+\.\d+)%\)/, weightText);
 
+      // Process and regex out letter grade 
       const gradeText = $(tr)
         .find('td')
         .slice(2, 3)
         .text();
       const grade = extractNumber(/(\d+)/, gradeText);
 
+      // Process and regex out raw score 
       const scoreText = $(tr)
         .find('td')
         .slice(3, 4)
         .text();
       const score = extractNumber(/(\d+.\d+)/, scoreText);
 
+      // Process and regex out points
       const pointsText = $(tr)
         .find('td')
         .slice(4, 5)
         .text();
       const points = extractPoints(pointsText);
 
+      // Return parsed data
       return {
         lit,
         weight,
@@ -194,6 +209,7 @@ const parseGradebook = ($) => {
       };
     });
 
+    // Do I hear nested returns
     return {
       category,
       breakdown,
@@ -201,7 +217,9 @@ const parseGradebook = ($) => {
     };
   };
 
+  // Utilizing helper functions, finds elements
   const extractData = (_, tr) => {
+    // Get table data
     if ($(tr).find('td').length <= 1) return null;
 
     const isCategory = $(tr).hasClass('sf_Section cat');
@@ -275,6 +293,7 @@ const parseGradebook = ($) => {
       .slice(1, 2)
       .text();
 
+    // Find table elements and extract edge-case statuses
     const missingText = $(tr)
       .find('td')
       .slice(5, 6)
@@ -287,12 +306,14 @@ const parseGradebook = ($) => {
       .find('td')
       .slice(7, 8)
       .text();
+    // Shove back asasignment attendance data
     const meta = [
       { type: 'missing', note: missingText },
       { type: 'noCount', note: noCountText },
       { type: 'absent', note: absentText },
-    ].filter(({ note }) => !note.match(/^\s+$/));
+    ].filter(({ note }) => !note.match(/^\s+$/)); // Callback for filter
 
+    // Return it all back
     return {
       title,
       grade,
@@ -303,6 +324,7 @@ const parseGradebook = ($) => {
     };
   };
 
+  // Nest return objects (helper)
   const nest = (gradebook, data) => {
     if (data === null) return gradebook;
     if (data.category) return gradebook.concat(data);
