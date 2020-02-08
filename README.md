@@ -1,8 +1,7 @@
 ---
 description: >-
-  Welcome to the documentaton of SkywarderAPI, the unofficial Skyward API!
-  SkywarderAPI allows you to access information about Skyward through a REST
-  API.
+  Welcome to the documentaton of Skywarder, the unofficial Skyward API!
+  Skywarder allows you to access information about Skyward through a REST API.
 ---
 
 # Introduction
