@@ -1,25 +1,13 @@
-# Skywarder API
-Powerful REST API for interacting with Skyward via scraping.
+---
+description: >-
+  Welcome to the documentaton of SkywarderAPI, the unofficial Skyward API!
+  SkywarderAPI allows you to access information about Skyward through a REST
+  API.
+---
 
-BaseURL: [https://api.skywarder.cf](https://api.skywarder.cf)
+# Introduction
 
-## Code Documentation
+If you want to experiment quickly, check out [Postwoman](https://postwoman.io/?method=GET&url=https://api.skywarder.cf/&path=/v1/report?username=&password=&auth=Bearer%20Token&params=%5B%7B%22key%22:%22username%22,%22value%22:%22%22%7D,%7B%22key%22:%22password%22,%22value%22:%22%22%7D%5D&rawParams=%7B%7D). No idea what a REST API is? Read [this](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
 
-| Component    | Progress | Status          | Description                       |
-|--------------|----------|-----------------|-----------------------------------|
-| /controllers | 100%     | **DONE**        | Express routes                    |
-| /middleware  | 100%     | **DONE**        | Middleware helper functions       |
-| /models      | 100%     | **DONE**        | Mongoose related stuff            |
-| /skye        | 60%      | **IN PROGRESS** | Sub-library for scraping Skyward  |
-| /src         | 100%     | **DONE**        | Express serverside & registration |
+> Note: We do not condone "hacking" or "cracking" of accounts using this API. The goal of this is to provide and educational and experimental platform for programmers to use. Do not login to accounts without explicit permission of the student.
 
-## API Reference
-
-| Endpoint      | Method | Description                   | Parameters                                       |
-|---------------|--------|-------------------------------|--------------------------------------------------|
-| /v1/token     | GET    | Get API bearer token          |                                                  |
-| /v1/report    | GET    | Get student report            | access_token, username, password                 |
-| /v1/gradebook | GET    | Get student gradebook data    | access_token, username, password, course, bucket |
-| /v1/history   | GET    | Get student academic history  | access_token, username, password                 |
-
-By [Aiden Bai](https://aiden.codes)
