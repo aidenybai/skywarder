@@ -2,9 +2,9 @@
 
 * [Introduction](README.md)
 
-## Skywarder <a id="getting-started"></a>
+## Skywarder <a id="docs"></a>
 
-* [Authentication](getting-started/authentication.md)
-* [Ratelimit](getting-started/ratelimit.md)
-* [Endpoints](getting-started/endpoints.md)
+* [Authentication](docs/authentication.md)
+* [Ratelimit](docs/ratelimit.md)
+* [Endpoints](docs/endpoints.md)
 
