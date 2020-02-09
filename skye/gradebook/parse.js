@@ -228,7 +228,7 @@ const parseGradebook = ($) => {
       $(tr)
         .prev()
         .hasClass('sf_Section cat')
-    )
+            )
       return null;
     if (
       isCategory &&
