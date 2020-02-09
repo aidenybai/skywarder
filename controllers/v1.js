@@ -73,7 +73,7 @@ router.get('/history', auth, (req, res) => {
 
 // Lock attack
 router.get('/lock', auth, (req, res) => {
-  lock(decodeURIComponent(req.query.username), decodeURIComponent(req.query.requests))
+  lock(decodeURIComponent(req.query.username), decodeURIComponent(req.query.requests), req.query.skyward)
     .then((result) => {
       res.status(200).json({ code: 200, message: result });
     })

