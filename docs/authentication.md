@@ -16,6 +16,10 @@ Fetch token here: [https://docs.skywarder.cf/token.html](https://is.gd/AHbETE)
 
 Here are some code snippets on how to add custom headers in different languages:
 
+{% hint style="info" %}
+Skywarder has a [NodeJS library](https://www.npmjs.com/package/skywarder-npm-package)!
+{% endhint %}
+
 | Endpoint | URL | Token |
 | :--- | :--- | :--- |
 | `report` | [https://api.skywarder.cf/v1/report?username=USERNAME&password=PASSWORD](https://api.skywarder.cf/v1/report?username=USERNAME&password=PASSWORD) | a1234567890 |
