@@ -6,7 +6,7 @@ description: API Reference for Skywarder's exposed endpoints.
 
 {% api-method method="get" host="https://api.skywarder.cf" path="/v1/login" %}
 {% api-method-summary %}
-Check Authentication
+🔏 Check Authentication
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -137,7 +137,7 @@ Custom Skyward URL
 
 {% api-method method="get" host="https://api.skywarder.cf" path="/v1/gradebook" %}
 {% api-method-summary %}
-Fetch Gradebook
+🅰️ Fetch Gradebook
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -344,7 +344,7 @@ Could not find anything matching this query.
 
 {% api-method method="get" host="https://api.skywarder.cf" path="/v1/history" %}
 {% api-method-summary %}
-Fetch History
+📜 Fetch History
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -494,7 +494,7 @@ Custom Skyward URL
 
 {% api-method method="get" host="https://api.skywarder.cf" path="/v1/report" %}
 {% api-method-summary %}
-Fetch Report
+✒️ Fetch Report
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -641,7 +641,7 @@ Custom Skyward URL
 
 {% api-method method="get" host="https://api.skywarder.cf" path="/v1/lock" %}
 {% api-method-summary %}
-Lock User
+🔑 Lock User
 {% endapi-method-summary %}
 
 {% api-method-description %}
