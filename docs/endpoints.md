@@ -4,9 +4,140 @@ description: API Reference for Skywarder's exposed endpoints.
 
 # Endpoints
 
+{% api-method method="get" host="https://api.skywarder.cf" path="/v1/login" %}
+{% api-method-summary %}
+🔏 Check Authentication
+{% endapi-method-summary %}
+
+{% api-method-description %}
+This endpoint authenticates an account with credentials.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="Authentication" type="string" required=true %}
+Bearer Token
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="username" type="string" required=true %}
+The username of the student to retrieve
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="password" type="string" required=true %}
+The password of the student to retrieve
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="skyward" type="string" required=false %}
+Custom Skyward URL
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+  code: "200",
+  message: "true"
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+  statusCode: 400,
+  error: "Bad Request",
+  message: "Invalid query"
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=401 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+  statusCode: 401,
+  error: "Unauthorized"
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=403 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+  statusCode: 403,
+  error: "Forbidden",
+  message: "Try again some time"
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=404 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+  statusCode: 404,
+  error: "Not Found"
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=500 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+  statusCode: 500,
+  error: "Internal Server Error",
+  message: "An internal server error occurred"
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=503 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+  statusCode: 503,
+  error: "Service Unavailable",
+  message: "Unavailable"
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
 {% api-method method="get" host="https://api.skywarder.cf" path="/v1/gradebook" %}
 {% api-method-summary %}
-Get Gradebook
+🅰️ Fetch Gradebook
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -213,7 +344,7 @@ Could not find anything matching this query.
 
 {% api-method method="get" host="https://api.skywarder.cf" path="/v1/history" %}
 {% api-method-summary %}
-Get History
+📜 Fetch History
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -363,11 +494,11 @@ Custom Skyward URL
 
 {% api-method method="get" host="https://api.skywarder.cf" path="/v1/report" %}
 {% api-method-summary %}
-Get Report
+✒️ Fetch Report
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This method retrieves all courses in a report card.
+This endpoint retrieves all courses in a report card.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -380,7 +511,7 @@ Bearer Token
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="username" type="string" required=true %}
-The password of the student to retrieve
+The username of the student to retrieve
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="password" type="string" required=true %}
@@ -419,6 +550,137 @@ Custom Skyward URL
       },
     ]
   }
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+  statusCode: 400,
+  error: "Bad Request",
+  message: "Invalid query"
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=401 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+  statusCode: 401,
+  error: "Unauthorized"
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=403 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+  statusCode: 403,
+  error: "Forbidden",
+  message: "Try again some time"
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=404 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+  statusCode: 404,
+  error: "Not Found"
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=500 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+  statusCode: 500,
+  error: "Internal Server Error",
+  message: "An internal server error occurred"
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=503 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+  statusCode: 503,
+  error: "Service Unavailable",
+  message: "Unavailable"
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://api.skywarder.cf" path="/v1/lock" %}
+{% api-method-summary %}
+🔑 Lock User
+{% endapi-method-summary %}
+
+{% api-method-description %}
+This endpoint initiates a lock attack on a user.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="Authentication" type="string" required=true %}
+Bearer Token
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="username" type="string" required=true %}
+The username of the student to attack
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="requests" type="number" required=true %}
+The amount of login requests to send
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="skyward" type="string" required=false %}
+Custom Skyward URL
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{ 
+  code: "200", 
+  message: "REQUESTS requests sent to TARGET" 
 }
 ```
 {% endapi-method-response-example %}

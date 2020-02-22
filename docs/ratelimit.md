@@ -5,7 +5,7 @@ description: The following headers are provided to manage ratelimits.
 # Ratelimit
 
 {% hint style="info" %}
-Rate limit: 5 requests per second, 4000 requests per hour global.
+🧙 **Tip**: Rate limit is 5 requests per second, 4000 requests per hour global.
 {% endhint %}
 
 | Header | Description |

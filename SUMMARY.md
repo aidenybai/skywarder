@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 
-## Skywarder <a id="docs"></a>
+## 🌌 Skywarder <a id="docs"></a>
 
 * [Authentication](docs/authentication.md)
 * [Ratelimit](docs/ratelimit.md)

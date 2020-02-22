@@ -6,15 +6,19 @@ description: All API Requests have to be authenticated.
 
 You can do so by providing the Authorization header \(or an `access_token` querystring\) with your token as the value.
 
-### Getting the API Token
+### 🔏 Getting the API Token
 
 {% hint style="info" %}
-Fetch token here: [https://docs.skywarder.cf/token.html](https://skywarder.cf/token.html)
+Fetch token here: [https://docs.skywarder.cf/token.html](https://is.gd/AHbETE)
 {% endhint %}
 
-### Code Samples
+### 📝 Code Samples
 
 Here are some code snippets on how to add custom headers in different languages:
+
+{% hint style="info" %}
+Skywarder has a [NodeJS library](https://www.npmjs.com/package/skywarder-npm-package)!
+{% endhint %}
 
 | Endpoint | URL | Token |
 | :--- | :--- | :--- |
