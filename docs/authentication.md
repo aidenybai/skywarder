@@ -9,7 +9,7 @@ You can do so by providing the Authorization header \(or an `access_token` query
 ### 🔏 Getting the API Token
 
 {% hint style="info" %}
-Fetch token here: [https://docs.skywarder.cf/token.html](https://is.gd/AHbETE)
+🧙 **Tip:** Fetch token here: [https://docs.skywarder.cf/token.html](https://is.gd/AHbETE)
 {% endhint %}
 
 ### 📝 Code Samples
@@ -17,7 +17,7 @@ Fetch token here: [https://docs.skywarder.cf/token.html](https://is.gd/AHbETE)
 Here are some code snippets on how to add custom headers in different languages:
 
 {% hint style="info" %}
-Skywarder has a [NodeJS library](https://www.npmjs.com/package/skywarder-npm-package)!
+🧙 **Tip:** Skywarder has a [NodeJS library](https://www.npmjs.com/package/skywarder-npm-package)!
 {% endhint %}
 
 | Endpoint | URL | Token |
