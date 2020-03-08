@@ -4,7 +4,7 @@
   "description": "Powerful REST API for interacting with Skyward via scraping.",
   "main": "src/server.js",
   "scripts": {
-    "start": "pm2 start src/server.js -i max --no-daemon --max-memory-restart"
+    "start": "pm2 start src/server.js -i max --no-daemon --max-memory-restart 500"
   },
   "dependencies": {
     "axios": "^0.19.2",
