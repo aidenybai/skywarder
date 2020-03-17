@@ -106,7 +106,7 @@ $.ajax(settings).done(function(response) {
 #### NodeJS
 
 {% hint style="info" %}
-🧙 **Tip:** Skywarder has a [NodeJS library](https://www.npmjs.com/package/skywarder-npm-package)!
+🧙 **Tip:** Skywarder has a [NodeJS library](https://npmjs.com/package/skywarder.js)!
 {% endhint %}
 
 ```javascript
