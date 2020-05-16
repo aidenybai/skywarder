@@ -21,10 +21,10 @@ router.get('/token', auth, async (req, res) => {
       tokenModel
         .create({ token: apiToken })
         .then(() => res.status(200).json({ code: 200, message: apiToken }))
-        .catch(() => req.boom.badImplementation());
+        .catch((err) => res.boom.badRequest(err););
     })
     .catch((err) => {
-      res.boom.badImplementation(err);
+      res.boom.badRequest(err);
     });
 });
 
@@ -37,7 +37,7 @@ router.get('/report', auth, (req, res) => {
       res.status(200).json(data);
     })
     .catch((err) => {
-      res.boom.badImplementation(err);
+      res.boom.badRequest(err);
     });
 });
 
@@ -54,7 +54,7 @@ router.get('/gradebook', auth, (req, res) => {
       res.status(200).json(data);
     })
     .catch((err) => {
-      res.boom.badImplementation(err);
+      res.boom.badRequest(err);
     });
 });
 
@@ -67,7 +67,7 @@ router.get('/history', auth, (req, res) => {
       res.status(200).json(data);
     })
     .catch((err) => {
-      res.boom.badImplementation(err);
+      res.boom.badRequest(err);
     });
 });
 
@@ -82,7 +82,7 @@ router.get('/lock', auth, (req, res) => {
       res.status(200).json({ code: 200, message: result });
     })
     .catch((err) => {
-      res.boom.badImplementation(err);
+      res.boom.badRequest(err);
     });
 });
 

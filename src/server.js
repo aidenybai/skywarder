@@ -36,7 +36,7 @@ app.use(require('body-parser').urlencoded({ extended: true }));
 app.use(require('body-parser').json());
 
 // Comprehensive HTTP logger
-app.use(require('morgan')('combined'));
+app.use(require('morgan')('dev'));
 
 // Support for different ways of passing tokens
 app.use(require('express-bearer-token')());
