@@ -21,7 +21,7 @@ router.get('/token', auth, async (req, res) => {
       tokenModel
         .create({ token: apiToken })
         .then(() => res.status(200).json({ code: 200, message: apiToken }))
-        .catch((err) => res.boom.badRequest(err););
+        .catch((err) => res.boom.badRequest(err));
     })
     .catch((err) => {
       res.boom.badRequest(err);
