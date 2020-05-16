@@ -359,7 +359,6 @@ module.exports = ({ data }) => {
     gradeAdjustment,
     score,
     breakdown,
-    gradebook,
-    poweredby: 'skywarder'
+    gradebook
   };
 };

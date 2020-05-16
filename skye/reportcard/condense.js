@@ -12,8 +12,7 @@ const getData = ({ h }) => {
   return {
     course: Number($(element).attr('data-cni')),
     bucket: $(element).attr('data-bkt'),
-    score: $(element).text(),
-    poweredby: 'skywarder'
+    score: $(element).text()
   };
 };
 

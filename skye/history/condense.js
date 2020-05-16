@@ -14,7 +14,7 @@ const parseHeader = ({ c }) => {
   // Ternary out grade
   const grade = headerResults ? Number(headerResults[3]) : null;
 
-  return { dates, grade, courses: [], poweredby: 'skywarder' };
+  return { dates, grade, courses: [] };
 };
 
 // Get bucket aliases
