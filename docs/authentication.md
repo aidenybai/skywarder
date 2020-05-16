@@ -16,10 +16,6 @@ You can do so by providing the Authorization header \(or an `access_token` query
 
 Here are some code snippets on how to add custom headers in different languages:
 
-{% hint style="info" %}
-🧙 **Tip:** Skywarder has a [NodeJS library](https://www.npmjs.com/package/skywarder-npm-package)!
-{% endhint %}
-
 | Endpoint | URL | Token |
 | :--- | :--- | :--- |
 | `report` | [https://api.skywarder.cf/v1/report?username=USERNAME&password=PASSWORD](https://api.skywarder.cf/v1/report?username=USERNAME&password=PASSWORD) | a1234567890 |
@@ -108,6 +104,10 @@ $.ajax(settings).done(function(response) {
 ```
 
 #### NodeJS
+
+{% hint style="info" %}
+🧙 **Tip:** Skywarder has a [NodeJS library](https://npmjs.com/package/skywarder.js)!
+{% endhint %}
 
 ```javascript
 const request = require("request");
