@@ -4,7 +4,7 @@
   "description": "Powerful REST API for interacting with Skyward via scraping.",
   "main": "src/server.js",
   "scripts": {
-    "start": "pm2 start src/server.js -i max --no-daemon --max-memory-restart 500"
+    "start": "node src/server.js"
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -22,7 +22,6 @@
     "mongoose": "^5.8.11",
     "morgan": "^1.9.1",
     "node-cmd": "^3.0.0",
-    "pm2": "^4.2.3",
     "uid-generator": "^1.0.0"
   },
   "author": "Aiden Bai <aidenybai@gmail.com> (aiden.codes)",
