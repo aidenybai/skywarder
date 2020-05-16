@@ -19,7 +19,7 @@ class Skye {
     return authenticate(this.skywardURL)(user, pass)
       .then(auth => reportcard.fetch(this.skywardURL)(auth))
       .then(response => ({
-        raw: response.data,
+        // raw: response.data,
         data: reportcard.getData(response),
       }))
   }
@@ -29,7 +29,7 @@ class Skye {
      return authenticate(this.skywardURL)(user, pass)
       .then(auth => gradebook.fetch(this.skywardURL)(auth)(course, bucket))
       .then(response => ({
-        raw: response.data,
+        // raw: response.data,
         data: gradebook.getData(response),
       })) 
   }
@@ -39,7 +39,7 @@ class Skye {
     return authenticate(this.skywardURL)(user, pass)
       .then(history.fetch(this.skywardURL))
       .then(response => ({
-        raw: response.data,
+        // raw: response.data,
         data: history.getData(response),
       })) 
   }
