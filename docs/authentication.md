@@ -9,7 +9,7 @@ You can do so by providing the Authorization header \(or an `access_token` query
 ### 🔏 Getting the API Token
 
 {% hint style="info" %}
-🧙 **Tip:** Fetch token here: [https://docs.skywarder.cf/token.html](https://is.gd/AHbETE)
+🧙 **Tip:** Fetch token here: [https://token.skywarder.cf](https://token.skywarder.cf)
 {% endhint %}
 
 ### 📝 Code Samples
